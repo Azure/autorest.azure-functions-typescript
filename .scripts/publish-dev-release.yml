@@ -1,5 +1,4 @@
-# Publishes a development release of @autorest/typescript for
-# any commit to the master branch.
+# Publishes a development release of @autorest/azure-functions-typescript when run manually
 
 trigger: none
 pr: none
@@ -20,7 +19,8 @@ steps:
 
 - script: |
     export DEV_VERSION=$(node -p -e "require('./package.json').version")-dev.$BUILD_BUILDNUMBER
+    export ARTIFACT_NAME=$(node -p -e "require('./package.json').name.replace('/','-').replace('@','')")
     npm version --no-git-tag-version $DEV_VERSION
     npm pack
-    npx publish-release --token $(azuresdk-github-pat) --repo autorest.azure-functions-typescript --owner azure --name v$DEV_VERSION --tag v$DEV_VERSION --notes='prerelease build for autorest.azure-functions-typescript' --prerelease --editRelease false --assets autorest-azure-functions-$DEV_VERSION.tgz --target_commitish $(Build.SourceBranchName)
+    npx publish-release --token $(azuresdk-github-pat) --repo autorest.azure-functions-typescript --owner azure --name v$DEV_VERSION --tag v$DEV_VERSION --notes='prerelease build for autorest/azure-functions-typescript' --prerelease --editRelease false --assets $ARTIFACT_NAME-$DEV_VERSION.tgz --target_commitish $(Build.SourceBranchName)
   displayName: 'Publish to GitHub'
