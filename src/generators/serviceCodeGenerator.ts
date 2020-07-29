@@ -75,6 +75,11 @@ function writeAzureFunctionsFunctions(
       moduleSpecifier: "@azure/functions"
     });
 
+    index_ts_file.addImportDeclaration({
+      namespaceImport: "Models",
+      moduleSpecifier: "../models"
+    });
+
     // index_ts_file.addStatements(generateHttpTrigger(operation))
     index_ts_file.addFunction({
       name: `${operation.name}`,
