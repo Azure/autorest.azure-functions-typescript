@@ -1,6 +1,6 @@
 {
     "name": "@autorest/azure-functions-typescript",
-    "version": "0.0.1-preview",
+    "version": "0.0.2-preview",
     "private": true,
     "scripts": {
         "build": "tsc -p .",

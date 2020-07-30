@@ -12,22 +12,6 @@ export function generateAzureFunctionsFunctions(clientDetails: ClientDetails, pr
   const mappersName = getMappersName(clientDetails.className);
   const hasMappers = !!clientDetails.mappers.length;
 
-  // Check if there are any client level operations
-  const hasInlineOperations = clientDetails.operationGroups.some(
-    og => og.isTopLevel
-  );
-
-  // Check if there are any non client-level operations to import
-  const hasImportedOperations = clientDetails.operationGroups.some(
-    og => !og.isTopLevel
-  );
-
-  const hasCredentials = !!clientDetails.options.addCredentials;
-  const hasClientOptionalParams = clientDetails.parameters.some(
-    p =>
-      !p.required && p.implementationLocation === ImplementationLocation.Client
-  );
-
   const clientFile = project.createSourceFile(
     `${clientDetails.srcPath}/${clientDetails.sourceFileName}.ts`,
     undefined,

@@ -34,7 +34,8 @@ export function generatePackageJson(
     },
     devDependencies: {
       "@azure/functions": "^1.0.2-beta2",
-      typescript: "^3.3.3"
+      typescript: "^3.3.3",
+      "@azure/core-http": "^1.1.4"
     }
   };
 
