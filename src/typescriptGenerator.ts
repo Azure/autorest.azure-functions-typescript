@@ -24,6 +24,7 @@ import { generateLROFiles } from "./generators/LROGenerator";
 import { generateGitIgnoreFile } from "./generators/static/gitIgnoreFileGenerator";
 import { generateHostJson } from "./generators/static/hostJsonFileGenerator";
 import { generateLocalSettingsJson } from "./generators/static/localSettingsFileGenerator";
+import { generateAutorestGeneratedJson } from "./generators/static/autorestGeneratedJsonFileGenerator";
 import { generateVSCodeExtensionsFile } from "./generators/static/vsCodeExtensionFileGenerator";
 
 const prettierTypeScriptOptions: prettier.Options = {
@@ -86,6 +87,7 @@ export async function generateTypeScriptLibrary(
     generateVSCodeExtensionsFile(clientDetails, project);
   }
 
+  generateAutorestGeneratedJson(project);
   generateAzureFunctionsFunctions(clientDetails, project);
   generateModels(clientDetails, project);
   generateMappers(clientDetails, project);

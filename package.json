@@ -1,6 +1,7 @@
 {
     "name": "@autorest/azure-functions-typescript",
-    "version": "0.1.0-preview",
+    "version": "0.2.0-preview",
+    "description": "The Azure Functions extension for Typescript code generators in AutoRest.",
     "scripts": {
         "build": "tsc -p .",
         "build:test:browser": "tsc -p tsconfig.browser-test.json && webpack --config webpack.config.test.js",
@@ -22,6 +23,12 @@
         "clone:specs": "git clone https://github.com/Azure/azure-rest-api-specs.git ./.tmp/specs",
         "smoke-test": "ts-node ./test/utils/smoke-test.ts"
     },
+    "author": "Microsoft Corporation",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Azure/autorest.azure-functions/issues"
+    },
+    "homepage": "https://github.com/Azure/autorest.azure-functions-typescript/",
     "files": [
         "src",
         "dist/**",
