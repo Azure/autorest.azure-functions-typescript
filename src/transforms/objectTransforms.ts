@@ -287,10 +287,7 @@ function transformPolymorphicObject(
     discriminatorPath = `${uberParentName}.${schema.discriminatorValue}`;
   }
 
-  return { // @ts-ignore
-    discriminatorValues, // @ts-ignore
-    discriminatorPath, // @ts-ignore
-    unionName,
-    ...objectDetails
-  } as PolymorphicObjectDetails;
+  // TODO: make it work without ignoring
+  // @ts-ignore
+  return { discriminatorValues, discriminatorPath, unionName, ...objectDetails} as PolymorphicObjectDetails;
 }
