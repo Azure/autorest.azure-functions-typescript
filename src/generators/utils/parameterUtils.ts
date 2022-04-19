@@ -7,7 +7,7 @@ import {
   ImplementationLocation,
   SchemaType,
   ParameterLocation
-} from "@azure-tools/codemodel";
+} from "@autorest/codemodel";
 import { wrapString, IndentationType } from "./stringUtils";
 
 interface ParameterFilterOptions {

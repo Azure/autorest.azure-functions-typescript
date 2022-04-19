@@ -4,7 +4,7 @@
 import { Project, SourceFile, StructureKind } from "ts-morph";
 import { ClientDetails } from "../models/clientDetails";
 import { getMappersName, getModelsName } from "../utils/nameUtils";
-import { ImplementationLocation } from "@azure-tools/codemodel";
+import { ImplementationLocation } from "@autorest/codemodel";
 import { generateFunctionJson, generateHttpTrigger } from "./azureFunctionsCodeGenerator";
 
 export function generateAzureFunctionsFunctions(clientDetails: ClientDetails, project: Project) {

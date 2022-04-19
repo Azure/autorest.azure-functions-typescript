@@ -1,5 +1,5 @@
 import { OperationDetails } from "../models/operationDetails";
-import { ConstantSchema } from "@azure-tools/codemodel";
+import { ConstantSchema } from "@autorest/codemodel";
 
 export function generateHttpTrigger(operation: OperationDetails): string {
   let statements = `

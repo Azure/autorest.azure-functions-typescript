@@ -9,7 +9,7 @@ import {
   ChoiceSchema,
   SealedChoiceSchema,
   SchemaType
-} from "@azure-tools/codemodel";
+} from "@autorest/codemodel";
 import {
   normalizeName,
   NameType,
@@ -23,7 +23,7 @@ import { transformOptions } from "./optionsTransforms";
 import { transformParameters } from "./parameterTransforms";
 import { transformObjects, transformObject } from "./objectTransforms";
 import { ObjectDetails } from "../models/modelDetails";
-import { Host } from "@azure-tools/autorest-extension-base";
+import { AutorestExtensionHost } from "@autorest/extension-base";
 import { transformBaseUrl } from "./urlTransforms";
 import { normalizeModelWithExtensions } from "./extensions";
 import { transformGroups } from "./groupTransforms";
@@ -57,7 +57,7 @@ export function transformChoice(
 
 export async function transformCodeModel(
   codeModel: CodeModel,
-  host: Host
+  host: AutorestExtensionHost
 ): Promise<ClientDetails> {
   const { name: clientName } = getLanguageMetadata(codeModel.language);
   const className = normalizeName(

@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { HttpMethod, Parameter } from "@azure-tools/codemodel";
+import { HttpMethod, Parameter } from "@autorest/codemodel";
 import { KnownMediaType } from "@azure-tools/codegen";
 import { Mapper } from "@azure/core-http";
 import { ParameterDetails } from "./parameterDetails";

@@ -1,10 +1,10 @@
-import { Host } from "@azure-tools/autorest-extension-base";
+import { AutorestExtensionHost } from "@autorest/extension-base";
 import { ClientOptions } from "../models/clientDetails";
 import { OperationGroupDetails } from "../models/operationDetails";
 import { KnownMediaType } from "@azure-tools/codegen";
 
 export async function transformOptions(
-  host: Host,
+  host: AutorestExtensionHost,
   operationGroups: OperationGroupDetails[]
 ): Promise<ClientOptions> {
   const mediaTypes = getMediaTypesStyles(operationGroups);

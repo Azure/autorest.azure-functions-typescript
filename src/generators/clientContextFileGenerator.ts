@@ -13,7 +13,7 @@ import { normalizeName, NameType } from "../utils/nameUtils";
 import { ClientDetails } from "../models/clientDetails";
 import { PackageDetails } from "../models/packageDetails";
 import { ParameterDetails } from "../models/parameterDetails";
-import { ImplementationLocation, SchemaType } from "@azure-tools/codemodel";
+import { ImplementationLocation, SchemaType } from "@autorest/codemodel";
 import { EndpointDetails } from "../transforms/urlTransforms";
 import { formatJsDocParam } from "./utils/parameterUtils";
 

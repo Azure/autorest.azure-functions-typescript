@@ -1,4 +1,4 @@
-import { OperationGroup, ObjectSchema } from "@azure-tools/codemodel";
+import { OperationGroup, ObjectSchema } from "@autorest/codemodel";
 import { getOperationFullName } from "./nameUtils";
 import { headersToSchema } from "./headersToSchema";
 

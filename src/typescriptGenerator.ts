@@ -2,9 +2,9 @@
 // Licensed under the MIT License.
 
 import * as prettier from "prettier";
-import { CodeModel } from "@azure-tools/codemodel";
+import { CodeModel } from "@autorest/codemodel";
 import { Project, IndentationText } from "ts-morph";
-import { Host } from "@azure-tools/autorest-extension-base";
+import { AutorestExtensionHost } from "@autorest/extension-base";
 import { PackageDetails } from "./models/packageDetails";
 import { transformCodeModel } from "./transforms/transforms";
 
@@ -47,7 +47,7 @@ const prettierJSONOptions: prettier.Options = {
 
 export async function generateTypeScriptLibrary(
   codeModel: CodeModel,
-  host: Host
+  host: AutorestExtensionHost
 ): Promise<void> {
   const project = new Project({
     useVirtualFileSystem: true,

@@ -28,7 +28,7 @@ import {
   OperationGroupDetails
 } from "../models/operationDetails";
 import { ParameterDetails } from "../models/parameterDetails";
-import { ImplementationLocation, Parameter } from "@azure-tools/codemodel";
+import { ImplementationLocation, Parameter } from "@autorest/codemodel";
 import { KnownMediaType } from "@azure-tools/codegen";
 import { getStringForValue } from "../utils/valueHelpers";
 import { getLanguageMetadata } from "../utils/languageHelpers";

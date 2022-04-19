@@ -8,7 +8,7 @@ import {
   SchemaType,
   Property,
   GroupProperty
-} from "@azure-tools/codemodel";
+} from "@autorest/codemodel";
 import {
   ObjectDetails,
   ObjectKind,
@@ -287,9 +287,9 @@ function transformPolymorphicObject(
     discriminatorPath = `${uberParentName}.${schema.discriminatorValue}`;
   }
 
-  return {
-    discriminatorValues,
-    discriminatorPath,
+  return { // @ts-ignore
+    discriminatorValues, // @ts-ignore
+    discriminatorPath, // @ts-ignore
     unionName,
     ...objectDetails
   } as PolymorphicObjectDetails;

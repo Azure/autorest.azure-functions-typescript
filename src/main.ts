@@ -3,22 +3,22 @@
 
 import {
   AutoRestExtension,
-  Host,
+  AutorestExtensionHost,
   startSession
-} from "@azure-tools/autorest-extension-base";
+} from "@autorest/extension-base";
 import { generateTypeScriptLibrary } from "./typescriptGenerator";
-import { CodeModel, codeModelSchema } from "@azure-tools/codemodel";
+import { CodeModel, codeModelSchema } from "@autorest/codemodel";
 
-export async function processRequest(host: Host) {
+export async function processRequest(host: AutorestExtensionHost) {
   try {
     const session = await startSession<CodeModel>(
       host,
-      undefined,
-      codeModelSchema
+      codeModelSchema,
+      undefined
     );
     const start = Date.now();
     await generateTypeScriptLibrary(session.model, host);
-    session.log(`Autorest.Typescript took ${Date.now() - start}ms`, "");
+    session.log(`Autorest.Typescript took ${Date.now() - start}ms`);
   } catch (err) {
     console.error("An error was encountered while handling a request:", err);
     throw err;

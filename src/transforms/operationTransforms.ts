@@ -14,7 +14,7 @@ import {
   ParameterLocation,
   ConstantSchema,
   CodeModel
-} from "@azure-tools/codemodel";
+} from "@autorest/codemodel";
 import {
   normalizeName,
   NameType,

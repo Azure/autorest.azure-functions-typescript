@@ -36,9 +36,9 @@
         "LICENSE"
     ],
     "dependencies": {
-        "@azure-tools/autorest-extension-base": "^3.1.246",
-        "@azure-tools/codegen": "^2.4.267",
-        "@azure-tools/codemodel": "^4.13.339",
+        "@autorest/extension-base": "^3.4.4",
+        "@azure-tools/codegen": "^2.9.0",
+        "@autorest/codemodel": "^4.15.0",
         "@azure/core-http": "^1.1.4",
         "@azure/core-lro": "^1.0.1",
         "@azure/core-paging": "^1.0.0",
@@ -57,7 +57,7 @@
         "@microsoft.azure/autorest.testserver": "^2.10.51",
         "@types/chai": "^4.2.8",
         "@types/express": "^4.17.2",
-        "@types/js-yaml": "3.12.1",
+        "@types/js-yaml": "^4.0.0",
         "@types/mocha": "^5.2.7",
         "@types/node": "^12.7.12",
         "@types/prettier": "^1.18.4",
